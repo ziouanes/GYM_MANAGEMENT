@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\build\OpenCvSharp3-AnyCPU.props" Condition="Exists('..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\build\OpenCvSharp3-AnyCPU.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9A63A94-4DE7-43D9-BE9E-CECED17C4869}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>projet_stage</RootNamespace>
+    <AssemblyName>projet stage</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net461\OpenCvSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Blob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net461\OpenCvSharp.Blob.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net461\OpenCvSharp.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net461\OpenCvSharp.UserInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.9\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="XanderUI">
+      <HintPath>..\..\..\..\Downloads\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abonement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abonement.Designer.cs">
+      <DependentUpon>Abonement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accuell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="accuell.Designer.cs">
+      <DependentUpon>accuell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="activity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="activity.Designer.cs">
+      <DependentUpon>activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbored.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashbored.Designer.cs">
+      <DependentUpon>Dashbored.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formaccuille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formaccuille.Designer.cs">
+      <DependentUpon>formaccuille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login form.Designer.cs">
+      <DependentUpon>login form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="members.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="members.Designer.cs">
+      <DependentUpon>members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier abonement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier abonement.Designer.cs">
+      <DependentUpon>modifier abonement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier activity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier activity.Designer.cs">
+      <DependentUpon>modifier activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier paiment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier paiment.Designer.cs">
+      <DependentUpon>modifier paiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier staff member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier staff member.Designer.cs">
+      <DependentUpon>modifier staff member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="msg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="msg.Designer.cs">
+      <DependentUpon>msg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paiment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="paiment.Designer.cs">
+      <DependentUpon>paiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payer now.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payer now.Designer.cs">
+      <DependentUpon>payer now.cs</DependentUpon>
+    </Compile>
+    <Compile Include="point.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="point.Designer.cs">
+      <DependentUpon>point.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pointage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pointage.Designer.cs">
+      <DependentUpon>pointage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="takepic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="takepic.Designer.cs">
+      <DependentUpon>takepic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Userabonement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Userabonement.Designer.cs">
+      <DependentUpon>Userabonement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userActivity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userActivity.Designer.cs">
+      <DependentUpon>userActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserlistClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserlistClient.Designer.cs">
+      <DependentUpon>UserlistClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userRegistration.Designer.cs">
+      <DependentUpon>userRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userStaffmember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userStaffmember.Designer.cs">
+      <DependentUpon>userStaffmember.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Abonement.resx">
+      <DependentUpon>Abonement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="accuell.resx">
+      <DependentUpon>accuell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="activity.resx">
+      <DependentUpon>activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashbored.resx">
+      <DependentUpon>Dashbored.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formaccuille.resx">
+      <DependentUpon>formaccuille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login form.resx">
+      <DependentUpon>login form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="members.resx">
+      <DependentUpon>members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifier abonement.resx">
+      <DependentUpon>modifier abonement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifier activity.resx">
+      <DependentUpon>modifier activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifier paiment.resx">
+      <DependentUpon>modifier paiment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifier staff member.resx">
+      <DependentUpon>modifier staff member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="msg.resx">
+      <DependentUpon>msg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paiment.resx">
+      <DependentUpon>paiment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payer now.resx">
+      <DependentUpon>payer now.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="point.resx">
+      <DependentUpon>point.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pointage.resx">
+      <DependentUpon>pointage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="takepic.resx">
+      <DependentUpon>takepic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Userabonement.resx">
+      <DependentUpon>Userabonement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userActivity.resx">
+      <DependentUpon>userActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserlistClient.resx">
+      <DependentUpon>UserlistClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userRegistration.resx">
+      <DependentUpon>userRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userStaffmember.resx">
+      <DependentUpon>userStaffmember.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6e94695575a2c897135f7cc0b86800eb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_557766re.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_window_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_close_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_minimize_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturegymfinaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturegymfin22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gym.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passworqqd_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gym1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barbell_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbell_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_woman_man_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_insight_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_user_female_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_payment_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qr_code_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identification_documents_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\planner_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_100px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock_100px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossfit-534615_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossfit-534615_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossfit-534615_640.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="source_pic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_print_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_by_modified_date_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment_history_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\membership_card_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\membership_card_240px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy_128px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silver_medal_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bronze_medal_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_rounded_up_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gold_medal_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gold_medal_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera_30px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_arrow_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_arrow_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_arrow_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_arrow_24px1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\build\OpenCvSharp3-AnyCPU.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\build\OpenCvSharp3-AnyCPU.props'))" />
+  </Target>
+</Project>
